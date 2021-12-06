@@ -11,3 +11,6 @@ git clone https://github.com/tokio-rs/tokio.git
 git clone https://github.com/bottlerocket-os/bottlerocket.git
 git clone https://github.com/firecracker-microvm/firecracker.git
 git clone https://github.com/hyperium/tonic.git
+git clone https://github.com/hyperium/hyper.git
+git clone https://github.com/awslabs/aws-sdk-rust.git
+git clone https://github.com/tokio-rs/tracing.git

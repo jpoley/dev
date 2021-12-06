@@ -4,7 +4,8 @@ sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462
 sudo apt-get install software-properties-common
 sudo apt-add-repository -y ppa:rael-gc/rvm
 sudo apt-get update
-sudo apt-get install rvm
+sudo apt-get install rvm -y
 sudo usermod -a -G rvm $USER
 rvm user gemsets
 rvm install ruby
+echo 'source /etc/profile.d/rvm.sh' >> /home/vagrant/.bashrc

@@ -19,12 +19,13 @@ Vagrant.configure("2") do |config|
         #master.vm.provision "shell", path: "installers/install-go.sh"     
         #master.vm.provision "shell", path: "repos/get-go.sh"      
 
-        #master.vm.provision "shell", path: "installers/install-python.sh"    
-        #master.vm.provision "shell", path: "installers/get-etcdctl.sh"
-        #master.vm.provision "shell", path: "installers/kube-prepare.sh"
-        master.vm.provision "shell", path: "installers/install-ruby.sh"  
-        master.vm.provision "shell", path: "installers/install-python.sh"          
-        master.vm.provision "shell", path: "installers/install-node.sh"      
+      
+        master.vm.provision "shell", path: "installers/get-etcdctl.sh"
+        master.vm.provision "shell", path: "installers/install-cks-cli.sh"  
+        master.vm.provision "shell", path: "installers/kube-prepare.sh"
+        #master.vm.provision "shell", path: "installers/install-ruby.sh"  
+        #master.vm.provision "shell", path: "installers/install-python.sh"          
+        #master.vm.provision "shell", path: "installers/install-node.sh"      
     
         master.vm.synced_folder "installers/",  "/home/vagrant/installers"
         master.vm.synced_folder "repos/",  "/home/vagrant/repos"
