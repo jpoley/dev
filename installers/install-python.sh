@@ -5,4 +5,7 @@ curl https://www.python.org/ftp/python/3.10.0/Python-3.10.0.tgz -o Python-3.10.0
 tar -xvzf Python-3.10.0.tgz
 cd Python-3.10.0
 ./configure --enable-optimizations
-sudo make install
+su - vagrant 
+sudo make altinstall -j4
+sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/pip pip /usr/local/bin/pip3.10 1
