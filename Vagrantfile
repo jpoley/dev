@@ -19,7 +19,8 @@ Vagrant.configure("2") do |config|
         master.vm.provision "shell", path: "installers/install-go.sh"     
         #master.vm.provision "shell", path: "repos/get-go.sh" 
         master.vm.provision "shell", path: "installers/install-ruby.sh"  
-        master.vm.provision "shell", path: "installers/install-python.sh"          
+        master.vm.provision "shell", path: "installers/install-python.sh"      
+            
         master.vm.provision "shell", path: "installers/install-node.sh"    
 
 
