@@ -7,13 +7,13 @@ sudo apt-get update
 sudo apt-get install rvm -y
 sudo usermod -a -G rvm $USER
 sudo usermod -a -G rvm vagrant
-echo 'source /etc/profile.d/rvm.sh' >> /home/vagrant/.bashrc
 su - vagrant
+echo 'source /etc/profile.d/rvm.sh' >> /home/vagrant/.bashrc
 source /etc/profile.d/rvm.sh
 rvm user gemsets
-/usr/share/rvm/bin/rvm install ruby-3.0.0
-/usr/share/rvm/bin/rvm install ruby-2.6.6
+rvm install ruby-3.0.0
+rvm install ruby-2.6.6
 rvm --default use 2.6.6
 echo 'rvm user gemsets' >> /home/vagrant/.bashrc
 echo 'rvm --default use 2.6.6' >> /home/vagrant/.bashrc
-echo 'source /etc/profile.d/rvm.sh' >> /root/.bashrc
+source /home/vagrant/.bashrc
