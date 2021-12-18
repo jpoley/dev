@@ -31,8 +31,15 @@ net.ipv4.ip_forward                 = 1
 net.bridge.bridge-nf-call-ip6tables = 1
 EOF
 
+cat <<EOF | sudo tee /etc/docker/daemon.json 
+{
+  "exec-opts": ["native.cgroupdriver=systemd"]
+}
+EOF
 # Apply sysctl params without reboot
 sudo sysctl --system
+
+sudo systemctl restart docker
 
 sudo mkdir -p /etc/containerd
 containerd config default | sudo tee /etc/containerd/config.toml

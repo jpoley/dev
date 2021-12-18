@@ -1,0 +1,17 @@
+# kubeadm-config.yaml
+kind: ClusterConfiguration
+apiVersion: kubeadm.k8s.io/v1beta3
+kubernetesVersion: v1.23.0
+apiServer:
+  extraArgs:
+    anonymous-auth: "false"
+    enable-admission-plugins: AlwaysPullImages,DefaultStorageClass
+    audit-log-path: /home/vagrant/kubeapi-audit.log
+  networking:
+    serviceSubnet: "192.168.50.10/24"
+    podSubnet: "192.168.0.0/16"
+    dnsDomain: "cluster.local"
+---
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+cgroupDriver: systemd
