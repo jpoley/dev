@@ -21,3 +21,5 @@ git clone https://github.com/cfndsl/cfndsl.git
 git clone https://github.com/hashicorp/terraform.git
 git clone https://github.com/pulumi/pulumi.git
 git clone https://github.com/aws/aws-cdk.git
+git clone https://github.com/karmada-io/karmada.git
+git clone https://github.com/open-cluster-management-io/OCM.git

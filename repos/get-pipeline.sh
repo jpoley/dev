@@ -12,3 +12,10 @@ git clone https://github.com/operator-framework/operator-sdk.git
 git clone https://github.com/operator-framework/operator-lifecycle-manager.git
 git clone https://github.com/operator-framework/operator-registry.git
 git clone https://github.com/buildpacks/pack.git
+git clone https://github.com/kyverno/kyverno.git
+git clone https://github.com/open-policy-agent/opa.git
+git clone https://github.com/open-policy-agent/gatekeeper.git
+git clone https://github.com/open-policy-agent/opa-envoy-plugin.git
+git clone https://github.com/open-policy-agent/gatekeeper-library.git
+git clone https://github.com/aquasecurity/trivy.git
+git clone https://github.com/aquasecurity/tracee.git
