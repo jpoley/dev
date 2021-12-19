@@ -10,6 +10,7 @@ cd etcd-$ETCD_VERSION-linux-amd64
 sudo cp etcd /usr/local/bin/
 sudo cp etcdctl /usr/local/bin/
 
+cd /home/vagrant/
 rm -rf etcd-$ETCD_VERSION-linux-amd64
 
 etcdctl --version
