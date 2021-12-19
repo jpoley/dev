@@ -16,10 +16,10 @@ Vagrant.configure("2") do |config|
         master.vm.provision "shell", path: "dev.sh"       
         #master.vm.provision "shell", path: "installers/install-node.sh", privileged: false   
         #master.vm.provision "shell", path: "installers/install-rust.sh" ,privileged: false    
-        master.vm.provision "shell", path: "installers/install-python.sh" ,privileged: false  
+        #master.vm.provision "shell", path: "installers/install-python.sh" ,privileged: false  
         master.vm.provision "shell", path: "installers/install-go.sh"  
         #master.vm.provision "shell", path: "installers/install-ruby.sh" 
-        master.vm.provision "shell", path: "repos/get-go.sh" 
+        #master.vm.provision "shell", path: "repos/get-go.sh" 
         #master.vm.provision "shell", path: "repos/get-rust.sh"      
 
         # fix docker containerd     
