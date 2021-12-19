@@ -19,8 +19,7 @@ Vagrant.configure("2") do |config|
         master.vm.provision "shell", path: "installers/install-python.sh" ,privileged: false  
         master.vm.provision "shell", path: "installers/install-go.sh"  
         master.vm.provision "shell", path: "installers/install-ruby.sh" 
-        master.vm.provision "shell", path: "repos/get-go.sh" 
-        master.vm.provision "shell", path: "repos/get-rust.sh"      
+   
 
         # fix docker containerd     
         master.vm.provision "shell", path: "installers/get-helm.sh"      
@@ -34,6 +33,8 @@ Vagrant.configure("2") do |config|
         master.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
         master.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false  
 
+        master.vm.provision "shell", path: "repos/get-go.sh" 
+        master.vm.provision "shell", path: "repos/get-rust.sh"   
         master.vm.synced_folder "installers/",  "/home/vagrant/installers"
         master.vm.synced_folder "repos/",  "/home/vagrant/repos"
         master.vm.synced_folder "platforms/",  "/home/vagrant/platforms"

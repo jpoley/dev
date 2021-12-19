@@ -1,0 +1,14 @@
+git clone https://github.com/argoproj/argo-workflows.git
+git clone https://github.com/argoproj/argo-cd.git
+git clone https://github.com/argoproj/argo-events.git
+git clone https://github.com/argoproj/argo-rollouts.git
+git clone https://github.com/argoproj/gitops-engine.git
+git clone https://github.com/fluxcd/flux.git
+git clone https://github.com/tektoncd/pipeline.git
+git clone https://github.com/GoogleContainerTools/kaniko.git
+git clone https://github.com/jenkins-x/jx.git
+git clone https://github.com/helm/helm.git
+git clone https://github.com/operator-framework/operator-sdk.git
+git clone https://github.com/operator-framework/operator-lifecycle-manager.git
+git clone https://github.com/operator-framework/operator-registry.git
+git clone https://github.com/buildpacks/pack.git
