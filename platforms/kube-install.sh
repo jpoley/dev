@@ -8,3 +8,5 @@ su - vagrant
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+kubectl taint node dev node-role.kubernetes.io/master:NoSchedule-
