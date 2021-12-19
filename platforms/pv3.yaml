@@ -8,10 +8,10 @@ spec:
   volumeMode: Filesystem
   accessModes:
   - ReadWriteMany
-  persistentVolumeReclaimPolicy: Delete
+  persistentVolumeReclaimPolicy: Retain
   storageClassName: default
   local:
-    path: /opt/k8s/mount3
+    path: /opt/k8s/default
   nodeAffinity:
     required:
       nodeSelectorTerms:

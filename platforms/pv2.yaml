@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: local-storage2
+  name: redis-db
 spec:
   capacity:
     storage: 100Gi
   volumeMode: Filesystem
   accessModes:
-  - ReadWriteOnce
-  persistentVolumeReclaimPolicy: Delete
-  storageClassName: local-storage
+  - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: redis-db
   local:
-    path: /opt/k8s/mount2
+    path: /opt/k8s/redis-db
   nodeAffinity:
     required:
       nodeSelectorTerms:
