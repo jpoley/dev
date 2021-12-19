@@ -8,4 +8,4 @@ kubectl create -f /home/vagrant/platforms/pv3.yaml
 
 kubectl create namespace airflow
 helm repo add apache-airflow https://airflow.apache.org
-helm install airflow apache-airflow/airflow --namespace airflow
+helm install --debug airflow apache-airflow/airflow --namespace airflow

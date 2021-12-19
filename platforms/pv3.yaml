@@ -1,17 +1,17 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: local-storage3
+  name: default
 spec:
   capacity:
     storage: 100Gi
   volumeMode: Filesystem
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   persistentVolumeReclaimPolicy: Delete
-  storageClassName: local-storage
+  storageClassName: default
   local:
-    path: /opt/k8s/mount3
+    path: /opt/k8s/mount4
   nodeAffinity:
     required:
       nodeSelectorTerms:
