@@ -27,8 +27,9 @@ Vagrant.configure("2") do |config|
         master.vm.provision "shell", path: "platforms/get-etcdctl.sh"
         master.vm.provision "shell", path: "platforms/install-cks-cli.sh"  
         master.vm.provision "shell", path: "platforms/kube-prepare.sh"
-        #master.vm.provision "shell", path: "platforms/kube-install.sh"
-        #master.vm.provision "shell", path: "platforms/install-calico.sh"
+        master.vm.provision "shell", path: "platforms/kube-install.sh"
+        master.vm.provision "shell", path: "platforms/install-calico.sh"
+        master.vm.provision "shell", path: "platforms/install-kubectl.sh" ,privileged: false  
 
         #master.vm.provision "shell", path: "platforms/install-airflow.sh"
         #master.vm.provision "shell", path: "platforms/install-argo.sh"
