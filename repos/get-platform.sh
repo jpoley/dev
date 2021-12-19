@@ -1,5 +1,6 @@
 cd /home/vagrant
-mkdir -p src/platform && cd src/platform
+mkdir -p src/platform 
+cd /home/vagrant/src/platform
 
 git clone https://github.com/syntasso/kratix.git
 git clone https://github.com/crossplane/crossplane.git

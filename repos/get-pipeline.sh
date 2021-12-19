@@ -1,3 +1,7 @@
+cd /home/vagrant
+mkdir -p src/pipeline 
+cd /home/vagrant/src/pipeline
+
 git clone https://github.com/argoproj/argo-workflows.git
 git clone https://github.com/argoproj/argo-cd.git
 git clone https://github.com/argoproj/argo-events.git
