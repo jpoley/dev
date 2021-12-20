@@ -4,7 +4,6 @@ sudo mkdir -p /opt/k8s/airflow/redis-db
 sudo mkdir -p /opt/k8s/airflow/logs
 sudo mkdir -p /opt/k8s/airflow/dags
 sudo mkdir -p /opt/k8s/airflow/local-storage
-sudo mkdir -p /bitnami/posgresql/data
 
 
 kubectl create -f /home/vagrant/platforms/pv1.yaml
@@ -15,6 +14,7 @@ kubectl create -f /home/vagrant/platforms/pv-dag.yaml
 kubectl create -f /home/vagrant/platforms/pv-pg.yaml
 kubectl create -f /home/vagrant/platforms/pv-local.yaml
 kubectl create -f /home/vagrant/platforms/sc.yaml
+kubectl create -f /home/vagrant/platforms/sc2.yaml
 
 
 helm repo add apache-airflow https://airflow.apache.org
@@ -23,9 +23,9 @@ kubectl create namespace airflow
 helm install --debug airflow  \
 --set logs.persistence.storageClassName=logs \
 --set dags.persistence.storageClassName=dags \
---set global.storageClass=postgres \
+--set global.storageClass=data \
 --set redis.persistence.storageClassName=redis-db \
---set workers.persistence.storageClassName=data \
+--set workers.persistence.storageClassName=default \
 apache-airflow/airflow --namespace airflow 
 
 
