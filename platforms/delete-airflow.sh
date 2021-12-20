@@ -5,3 +5,5 @@ kubectl delete -f /home/vagrant/platforms/pv3.yaml
 kubectl delete -f /home/vagrant/platforms/pv-log.yaml
 kubectl delete -f /home/vagrant/platforms/pv-dag.yaml
 kubectl delete -f /home/vagrant/platforms/pv-pg.yaml
+rm -rf /bitnami
+rm -rf /opt/k8s

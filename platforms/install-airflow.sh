@@ -3,7 +3,7 @@ sudo mkdir -p /opt/k8s/airflow/data
 sudo mkdir -p /opt/k8s/airflow/redis-db
 sudo mkdir -p /opt/k8s/airflow/logs
 sudo mkdir -p /opt/k8s/airflow/dags
-sudo mkdir -p /opt/k8s/airflow/posgresql/data
+sudo mkdir -p /bitnami/posgresql/data
 
 
 kubectl create -f /home/vagrant/platforms/pv1.yaml
