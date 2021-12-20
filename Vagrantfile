@@ -29,9 +29,8 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/kube-install.sh"
         dev.vm.provision "shell", path: "platforms/install-calico.sh"
         dev.vm.provision "shell", path: "platforms/install-kubectl.sh" ,privileged: false  
-
+        dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
-        dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false  
 
         dev.vm.provision "shell", path: "repos/get-go.sh" 
         dev.vm.provision "shell", path: "repos/get-rust.sh"  
@@ -41,7 +40,7 @@ Vagrant.configure("2") do |config|
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
         dev.vm.synced_folder "repos/",  "/home/vagrant/repos"
         dev.vm.synced_folder "platforms/",  "/home/vagrant/platforms"
-       dev.vm.synced_folder "src/",  "/home/vagrant/src"
+        dev.vm.synced_folder "src/",  "/home/vagrant/src"
 
     end
 
