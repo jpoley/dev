@@ -3,13 +3,15 @@ sudo mkdir -p /opt/k8s/airflow/data
 sudo mkdir -p /opt/k8s/airflow/redis-db
 sudo mkdir -p /opt/k8s/airflow/logs
 sudo mkdir -p /opt/k8s/airflow/dags
+sudo mkdir -p /opt/k8s/airflow/posgres
+
 
 kubectl create -f /home/vagrant/platforms/pv1.yaml
 kubectl create -f /home/vagrant/platforms/pv2.yaml
 kubectl create -f /home/vagrant/platforms/pv3.yaml
 kubectl create -f /home/vagrant/platforms/pv-log.yaml
 kubectl create -f /home/vagrant/platforms/pv-dag.yaml
-
+kubectl create -f /home/vagrant/platforms/pv-pg.yaml
 
 helm repo add apache-airflow https://airflow.apache.org
 
