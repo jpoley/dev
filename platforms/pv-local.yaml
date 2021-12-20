@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: local-storage
+  name: localstorage
 spec:
   capacity:
     storage: 100Gi
@@ -9,9 +9,9 @@ spec:
   accessModes:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
-  storageClassName: local-storage
+  storageClassName: localstorage
   local:
-    path: /opt/k8s/airflow/local-storage
+    path: /opt/k8s/airflow/localstorage
   nodeAffinity:
     required:
       nodeSelectorTerms:
