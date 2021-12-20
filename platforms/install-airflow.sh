@@ -14,6 +14,8 @@ kubectl create -f /home/vagrant/platforms/pv-log.yaml
 kubectl create -f /home/vagrant/platforms/pv-dag.yaml
 kubectl create -f /home/vagrant/platforms/pv-pg.yaml
 kubectl create -f /home/vagrant/platforms/pv-local.yaml
+kubectl create -f /home/vagrant/platforms/sc.yaml
+
 
 helm repo add apache-airflow https://airflow.apache.org
 
@@ -21,6 +23,10 @@ kubectl create namespace airflow
 helm install --debug airflow  \
 --set logs.persistence.storageClassName=logs \
 --set dags.persistence.storageClassName=dags \
---set redis.persistence.storageClassName=redisdb \
---set workers.persistence.storageClassName=default \
+--set global.storageClass=data \
+--set redis.persistence.storageClassName=redis-db \
+--set workers.persistence.storageClassName=data \
 apache-airflow/airflow --namespace airflow 
+
+
+#--set logs.persistence.enabled=true  --set logs.persistence.existingClaim=logs  \
