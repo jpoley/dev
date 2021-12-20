@@ -26,7 +26,7 @@ helm install --debug airflow  \
 --set dags.persistence.storageClassName=dags \
 --set global.storageClass=data \
 --set redis.persistence.storageClassName=redis-db \
---set workers.persistence.storageClassName=default \
+--set workers.persistence.storageClassName=logs \
 apache-airflow/airflow --namespace airflow 
 
 
