@@ -8,6 +8,7 @@ kubectl delete -f /home/vagrant/platforms/pv-pg.yaml
 kubectl delete -f /home/vagrant/platforms/pv-local.yaml
 kubectl delete -f /home/vagrant/platforms/sc.yaml
 kubectl create -f /home/vagrant/platforms/sc2.yaml
+kubectl create -f /home/vagrant/platforms/sc3.yaml
 
 sudo rm -rf /bitnami
 sudo rm -rf /opt/k8s

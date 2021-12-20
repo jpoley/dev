@@ -32,10 +32,10 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
 
-        dev.vm.provision "shell", path: "repos/get-go.sh" 
-        dev.vm.provision "shell", path: "repos/get-rust.sh"  
-        dev.vm.provision "shell", path: "repos/get-pipeline.sh"  
-        dev.vm.provision "shell", path: "repos/get-platform.sh"   
+        #dev.vm.provision "shell", path: "repos/get-go.sh" 
+        #dev.vm.provision "shell", path: "repos/get-rust.sh"  
+        #dev.vm.provision "shell", path: "repos/get-pipeline.sh"  
+        #dev.vm.provision "shell", path: "repos/get-platform.sh"   
 
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
         dev.vm.synced_folder "repos/",  "/home/vagrant/repos"

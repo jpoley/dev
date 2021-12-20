@@ -15,6 +15,7 @@ kubectl create -f /home/vagrant/platforms/pv-pg.yaml
 kubectl create -f /home/vagrant/platforms/pv-local.yaml
 kubectl create -f /home/vagrant/platforms/sc.yaml
 kubectl create -f /home/vagrant/platforms/sc2.yaml
+kubectl create -f /home/vagrant/platforms/sc3.yaml
 
 
 helm repo add apache-airflow https://airflow.apache.org
