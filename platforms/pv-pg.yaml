@@ -11,7 +11,7 @@ spec:
   persistentVolumeReclaimPolicy: Retain
   storageClassName: postgres
   local:
-    path: /opt/k8s/airflow/postgres
+    path: /bitnami/postgresql
   nodeAffinity:
     required:
       nodeSelectorTerms:
