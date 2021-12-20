@@ -10,8 +10,8 @@ kubectl apply -f argo-cd.yaml -n argo-cd
 kubectl apply -f argo-wf.yaml -n argo-workflow
 
 
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
-kubectl patch svc argo-server -n argo -p '{"spec": {"type": "NodePort"}}'
+kubectl patch svc argocd-server -n argo-cd -p '{"spec": {"type": "NodePort"}}'
+kubectl patch svc argo-server -n argo-workflow -p '{"spec": {"type": "NodePort"}}'
 
 #kubectl port-forward svc/argocd-server -n argocd 8080:443
 #kubectl -n argo port-forward deployment/argo-server 2746:2746
