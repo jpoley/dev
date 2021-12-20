@@ -23,7 +23,7 @@ kubectl create namespace airflow
 helm install --debug airflow  \
 --set logs.persistence.storageClassName=logs \
 --set dags.persistence.storageClassName=dags \
---set global.storageClass=data \
+--set global.storageClass=postgres \
 --set redis.persistence.storageClassName=redis-db \
 --set workers.persistence.storageClassName=data \
 apache-airflow/airflow --namespace airflow 
