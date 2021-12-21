@@ -7,7 +7,7 @@ spec:
     storage: 100Gi
   volumeMode: Filesystem
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: logs
   local:
