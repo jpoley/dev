@@ -29,5 +29,6 @@ helm install --debug airflow  \
 --set workers.persistence.storageClassName=logs \
 apache-airflow/airflow --namespace airflow 
 
+kubectl patch svc airflow-webserver -n airflow -p '{"spec": {"type": "NodePort"}}'
 
 #--set logs.persistence.enabled=true  --set logs.persistence.existingClaim=logs  \
