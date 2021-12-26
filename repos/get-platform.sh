@@ -18,6 +18,9 @@ git clone https://github.com/GoogleCloudPlatform/anthos-workshop.git
 git clone https://github.com/google/anthos-microk8s.git
 git clone https://github.com/vmware-tanzu/community-edition.git
 git clone https://github.com/aws-cloudformation/cloudformation-guard.git
+git clone https://github.com/awslabs/automated-account-configuration.git
+git clone https://github.com/awslabs/aws-cloudformation-iam-policy-validator.git
+git clone https://github.com/awslabs/assisted-log-enabler-for-aws.git
 git clone https://github.com/cfndsl/cfndsl.git
 git clone https://github.com/hashicorp/terraform.git
 git clone https://github.com/pulumi/pulumi.git
