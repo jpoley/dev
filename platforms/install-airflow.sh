@@ -31,5 +31,9 @@ helm install --debug airflow  \
 --set workers.persistence.storageClassName=sandiego \
 apache-airflow/airflow --namespace airflow 
 
+kubectl patch svc airflow-webserver -n airflow -p '{"spec": {"type": "NodePort"}}'
 
 #--set logs.persistence.enabled=true  --set logs.persistence.existingClaim=logs  \
+#kubectl exec -it airflow-worker-0 -n airflow -- /bin/sh
+#airflow users  create --role Admin --username jpoley --email admin --firstname admin --lastname admin --password encrytped
+
