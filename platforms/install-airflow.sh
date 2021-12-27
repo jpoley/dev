@@ -28,7 +28,7 @@ helm install --debug airflow  \
 --set dags.persistence.storageClassName=dags \
 --set global.storageClass=data \
 --set redis.persistence.storageClassName=redis-db \
---set workers.persistence.storageClassName=sandiego \
+--set workers.persistence.storageClassName=worker \
 apache-airflow/airflow --namespace airflow 
 
 kubectl patch svc airflow-webserver -n airflow -p '{"spec": {"type": "NodePort"}}'
