@@ -9,7 +9,6 @@ kubectl create ns argo-cd
 kubectl apply -f argo-cd.yaml -n argo-cd
 kubectl apply -f argo-wf.yaml -n argo-workflow
 
-
 kubectl patch svc argocd-server -n argo-cd -p '{"spec": {"type": "NodePort"}}'
 kubectl patch svc argo-server -n argo-workflow -p '{"spec": {"type": "NodePort"}}'
 
