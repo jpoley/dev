@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/install-kubectl.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
-
+        dev.vm.provision "shell", path: "platforms/dataflow.sh", privileged: false
         #dev.vm.provision "shell", path: "repos/get-go.sh" 
         #dev.vm.provision "shell", path: "repos/get-rust.sh"  
         #dev.vm.provision "shell", path: "repos/get-pipeline.sh"  
