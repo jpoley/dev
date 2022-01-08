@@ -1,6 +1,7 @@
-cd /home/vagrant
-mkdir -p src/platform 
-cd /home/vagrant/src/platform
+cd 
+HOME=$(pwd)
+SRC_HOME=$HOME/2022/src
+mkdir -p $SRC_HOME/platform && cd $SRC_HOME/platform s
 
 git clone https://github.com/syntasso/kratix.git
 git clone https://github.com/crossplane/crossplane.git

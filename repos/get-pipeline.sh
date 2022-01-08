@@ -1,6 +1,7 @@
-cd /home/vagrant
-mkdir -p src/pipeline 
-cd /home/vagrant/src/pipeline
+cd 
+HOME=$(pwd)
+SRC_HOME=$HOME/2022/src
+mkdir -p $SRC_HOME/pipeline && cd $SRC_HOME/pipeline
 
 git clone https://github.com/argoproj/argo-workflows.git
 git clone https://github.com/argoproj/argo-cd.git

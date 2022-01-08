@@ -1,5 +1,7 @@
-cd /home/vagrant
-mkdir -p src/go && cd src/go
+cd 
+HOME=$(pwd)
+SRC_HOME=$HOME/2022/src
+mkdir -p $SRC_HOME/go && cd $SRC_HOME/go
 
 git clone https://github.com/ethereum/go-ethereum.git
 git clone https://github.com/kubernetes/kubernetes.git
