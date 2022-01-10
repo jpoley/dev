@@ -17,3 +17,8 @@ git clone https://github.com/hyperium/hyper.git
 git clone https://github.com/awslabs/aws-sdk-rust.git
 git clone https://github.com/tokio-rs/tracing.git
 git clone https://github.com/solana-labs/solana.git
+git clone https://github.com/PacktPublishing/Creative-Projects-for-Rust-Programmers.git
+git clone https://github.com/PacktPublishing/Rust-Programming-Cookbook.git
+git clone https://github.com/PacktPublishing/Rust-Web-Programming.git
+git clone https://github.com/PacktPublishing/Hands-On-Microservices-with-Rust.git
+
