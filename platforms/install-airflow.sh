@@ -1,3 +1,4 @@
+export AF_HOME=/home/jpoley/dev
 sudo mkdir -p /opt/k8s/airflow/default
 sudo mkdir -p /opt/k8s/airflow/data
 sudo mkdir -p /opt/k8s/airflow/redis-db
@@ -7,13 +8,13 @@ sudo mkdir -p /opt/k8s/airflow/local-storage
 sudo mkdir -p /opt/k8s/airflow/worker
 
 
-kubectl create -f /home/vagrant/platforms/pv1.yaml
-kubectl create -f /home/vagrant/platforms/pv2.yaml
-kubectl create -f /home/vagrant/platforms/pv-worker.yaml
-kubectl create -f /home/vagrant/platforms/pv-dag.yaml
-kubectl create -f /home/vagrant/platforms/sc.yaml
-kubectl create -f /home/vagrant/platforms/sc2.yaml
-kubectl create -f /home/vagrant/platforms/sc3.yaml
+kubectl create -f $AF_HOME/platforms/pv1.yaml
+kubectl create -f $AF_HOME/platforms/pv2.yaml
+kubectl create -f $AF_HOME/platforms/pv-worker.yaml
+kubectl create -f $AF_HOME/platforms/pv-dag.yaml
+kubectl create -f $AF_HOME/platforms/sc.yaml
+kubectl create -f $AF_HOME/platforms/sc2.yaml
+kubectl create -f $AF_HOME/platforms/sc3.yaml
 
 helm repo add apache-airflow https://airflow.apache.org
 
