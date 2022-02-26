@@ -33,7 +33,6 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/dataflow.sh", privileged: false
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
-        dev.vm.synced_folder "repos/",  "/home/vagrant/repos"
         dev.vm.synced_folder "platforms/",  "/home/vagrant/platforms"
         dev.vm.synced_folder "src/",  "/home/vagrant/src"
 
