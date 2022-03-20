@@ -22,7 +22,6 @@ Vagrant.configure("2") do |config|
    
 
         # fix docker containerd     
-        dev.vm.provision "shell", path: "installers/get-helm.sh"      
         dev.vm.provision "shell", path: "platforms/get-etcdctl.sh"
         dev.vm.provision "shell", path: "platforms/install-cks-cli.sh"  
         dev.vm.provision "shell", path: "platforms/kube-prepare.sh"
@@ -30,6 +29,7 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/install-calico.sh"
         dev.vm.provision "shell", path: "platforms/install-kubectl.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false
+        dev.vm.provision "shell", path: "installers/get-helm.sh"
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/dataflow.sh", privileged: false
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"

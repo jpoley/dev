@@ -1,4 +1,4 @@
-export AF_HOME=/home/jpoley/dev
+export AF_HOME=/home/vagrant
 sudo mkdir -p /opt/k8s/airflow/default
 sudo mkdir -p /opt/k8s/airflow/data
 sudo mkdir -p /opt/k8s/airflow/redis-db
