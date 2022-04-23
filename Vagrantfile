@@ -35,6 +35,10 @@ Vagrant.configure("2") do |config|
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
         dev.vm.synced_folder "platforms/",  "/home/vagrant/platforms"
         dev.vm.synced_folder "src/",  "/home/vagrant/src"
+        
+        # dev.vm.network "forwarded_port", guest:8080 , host: 8080
+        # dev.vm.network "forwarded_port", guest:2746 , host: 2746
+        # dev.vm.network "forwarded_port", guest:443 , host: 8443
 
     end
 
