@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
     config.ssh.insert_key = false
 
     config.vm.provider "virtualbox" do |v|
-        v.memory = 6000 
+        v.memory = 12000 
         v.cpus = 2
     end
       
@@ -32,8 +32,8 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "installers/get-helm.sh"
         dev.vm.provision "shell", path: "platforms/install-crossplane.sh"
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
-        dev.vm.provision "shell", path: "platofmrs/install-kustomize.sh"
-        dev.vm.provision "shell", path: "platofmrs/install-gitea.sh"
+        dev.vm.provision "shell", path: "platforms/install-kustomize.sh"
+        dev.vm.provision "shell", path: "platforms/install-gitea.sh"
         dev.vm.provision "shell", path: "platforms/dataflow.sh", privileged: false
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
         dev.vm.synced_folder "platforms/",  "/home/vagrant/platforms"
