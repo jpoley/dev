@@ -3,3 +3,10 @@
 ./install-ack.sh rds
 ./install-ack.sh lambda
 ./install-ack.sh dynamodb
+./install-ack.sh sfn
+./install-ack.sh sqs
+./install-ack.sh sns
+./install-ack.sh kms
+./install-ack.sh iam
+./install-ack.sh eks
+./install-ack.sh ecr
