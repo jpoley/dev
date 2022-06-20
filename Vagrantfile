@@ -30,6 +30,7 @@ Vagrant.configure("2") do |config|
         dev.vm.provision "shell", path: "platforms/install-kubectl.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/install-argo.sh" ,privileged: false
         dev.vm.provision "shell", path: "installers/get-helm.sh"
+        dev.vm.provision "shell", path: "platforms/install-crossplane.sh"
         dev.vm.provision "shell", path: "platforms/install-airflow.sh" ,privileged: false  
         dev.vm.provision "shell", path: "platforms/dataflow.sh", privileged: false
         dev.vm.synced_folder "installers/",  "/home/vagrant/installers"
